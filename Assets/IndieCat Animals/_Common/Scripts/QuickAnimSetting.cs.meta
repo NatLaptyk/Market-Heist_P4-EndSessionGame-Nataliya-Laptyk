@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: d39a89e7fced3d74ab9ebfd8248748fe
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 185996
+  packageName: Low Poly Cats
+  packageVersion: 2.2
+  assetPath: Assets/IndieCat Animals/_Common/Scripts/QuickAnimSetting.cs
+  uploadId: 475103
