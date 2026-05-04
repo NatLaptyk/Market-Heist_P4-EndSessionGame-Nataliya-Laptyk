@@ -88,6 +88,7 @@ public class GameManager : MonoBehaviour
     public void AddItem(int amount = 1)
     {
         m_itemCount += amount;
+        if (m_itemCount < 0) m_itemCount = 0;
         OnItemCountChanged?.Invoke(m_itemCount);
     }
 

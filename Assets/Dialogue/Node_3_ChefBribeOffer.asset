@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 853e7965b42d1824c81997e5ec35c9db, type: 3}
+  m_Name: Node_3_ChefBribeOffer
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueNode
+  m_speakerName: Chef Cat
+  m_bodyText: Five coins. Take it or leave it.
+  m_choices:
+  - m_choiceText: Here's five coins.
+    m_nextNode: {fileID: 11400000, guid: 05d1cb19da186b845a25d6dff1b01151, type: 2}
+    m_outcome: 2
+    m_requiredCoins: 5
+  - m_choiceText: That's robbery!
+    m_nextNode: {fileID: 11400000, guid: 46bf2abadbd48bd4f94157e0d11ee7a5, type: 2}
+    m_outcome: 3
+    m_requiredCoins: 0
+  - m_choiceText: Let me think about it.
+    m_nextNode: {fileID: 0}
+    m_outcome: 4
+    m_requiredCoins: 0
