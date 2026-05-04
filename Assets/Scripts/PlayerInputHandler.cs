@@ -13,6 +13,7 @@ public class PlayerInputHandler : MonoBehaviour
 
     public event System.Action OnInteractPressed;
     public event System.Action OnAttackPressed;
+    public event System.Action OnJumpPressed;
 
     private void Awake()
     {
@@ -31,6 +32,8 @@ public class PlayerInputHandler : MonoBehaviour
 
         m_inputActions.Player.Interact.performed += OnInteractPerformed;
         m_inputActions.Player.Attack.performed += OnAttackPerformed;
+
+        m_inputActions.Player.Jump.performed += OnJumpPerformed;
     }
 
     private void OnDisable()
@@ -43,6 +46,8 @@ public class PlayerInputHandler : MonoBehaviour
 
         m_inputActions.Player.Interact.performed -= OnInteractPerformed;
         m_inputActions.Player.Attack.performed -= OnAttackPerformed;
+
+        m_inputActions.Player.Jump.performed -= OnJumpPerformed;
 
         m_inputActions.Player.Disable();
     }
@@ -75,5 +80,10 @@ public class PlayerInputHandler : MonoBehaviour
     private void OnAttackPerformed(InputAction.CallbackContext context)
     {
         OnAttackPressed?.Invoke();
+    } 
+    private void OnJumpPerformed(InputAction.CallbackContext context)
+    {
+    OnJumpPressed?.Invoke();
     }
+    
 }

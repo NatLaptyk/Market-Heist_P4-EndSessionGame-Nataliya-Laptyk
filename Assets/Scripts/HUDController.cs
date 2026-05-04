@@ -79,7 +79,7 @@ public class HUDController : MonoBehaviour
     private void OnItemCountChanged(int count)
     {
         if (m_itemCounterText == null) return;
-        m_itemCounterText.text = $"Fish Bones: {count}";
+        m_itemCounterText.text = $"Coins: {count}";
     }
 
     private void OnGameWon()
