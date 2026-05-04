@@ -37,6 +37,11 @@ public class PlayerController : MonoBehaviour
             Debug.LogWarning($"{nameof(PlayerController)}: Camera not assigned, falling back to Camera.main.");
         }
     }
+    private void Start() 
+    {
+        Cursor.lockState = CursorLockMode.Locked;
+        
+    }
 
     private void Update()
     {
