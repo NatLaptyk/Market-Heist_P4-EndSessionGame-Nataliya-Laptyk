@@ -17,5 +17,5 @@ MonoBehaviour:
   m_choices:
   - m_choiceText: Goodbye.
     m_nextNode: {fileID: 0}
-    m_outcome: 0
+    m_outcome: 4
     m_requiredCoins: 0

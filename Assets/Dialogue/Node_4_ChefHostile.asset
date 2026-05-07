@@ -14,4 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogueNode
   m_speakerName: Chef Cat
   m_bodyText: Then you've made your choice!
-  m_choices: []
+  m_choices:
+  - m_choiceText: Oh, have I?
+    m_nextNode: {fileID: 0}
+    m_outcome: 3
+    m_requiredCoins: 0

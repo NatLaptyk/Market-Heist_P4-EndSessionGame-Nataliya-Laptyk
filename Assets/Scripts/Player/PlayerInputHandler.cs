@@ -14,6 +14,8 @@ public class PlayerInputHandler : MonoBehaviour
     public event System.Action OnInteractPressed;
     public event System.Action OnAttackPressed;
     public event System.Action OnJumpPressed;
+    public event System.Action OnSavePressed;
+    public event System.Action OnLoadPressed;
 
     private void Awake()
     {
@@ -34,6 +36,8 @@ public class PlayerInputHandler : MonoBehaviour
         m_inputActions.Player.Attack.performed += OnAttackPerformed;
 
         m_inputActions.Player.Jump.performed += OnJumpPerformed;
+        m_inputActions.Player.Save.performed += OnSavePerformed;
+        m_inputActions.Player.Load.performed += OnLoadPerformed;
     }
 
     private void OnDisable()
@@ -48,6 +52,8 @@ public class PlayerInputHandler : MonoBehaviour
         m_inputActions.Player.Attack.performed -= OnAttackPerformed;
 
         m_inputActions.Player.Jump.performed -= OnJumpPerformed;
+        m_inputActions.Player.Save.performed -= OnSavePerformed;
+        m_inputActions.Player.Load.performed -= OnLoadPerformed;
 
         m_inputActions.Player.Disable();
     }
@@ -83,7 +89,16 @@ public class PlayerInputHandler : MonoBehaviour
     } 
     private void OnJumpPerformed(InputAction.CallbackContext context)
     {
-    OnJumpPressed?.Invoke();
+        OnJumpPressed?.Invoke();
+    }
+    private void OnSavePerformed(InputAction.CallbackContext context)
+    {
+        OnSavePressed?.Invoke();
+    }
+
+    private void OnLoadPerformed(InputAction.CallbackContext context)
+    {
+        OnLoadPressed?.Invoke();
     }
     
 }

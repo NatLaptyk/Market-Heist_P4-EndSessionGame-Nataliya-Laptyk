@@ -21,7 +21,7 @@ MonoBehaviour:
     m_requiredCoins: 5
   - m_choiceText: That's robbery!
     m_nextNode: {fileID: 11400000, guid: 46bf2abadbd48bd4f94157e0d11ee7a5, type: 2}
-    m_outcome: 3
+    m_outcome: 0
     m_requiredCoins: 0
   - m_choiceText: Let me think about it.
     m_nextNode: {fileID: 0}

@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Node_2_ChefPersuadeAttempt
   m_EditorClassIdentifier: Assembly-CSharp::DialogueNode
   m_speakerName: Chef Cat
-  m_bodyText: "Every cat has a sob story. But fine, you have honest eyes. Take one
-    fish \u2014 but only one. And don't come back."
+  m_bodyText: Every cat has a sob story. But fine, you have honest eyes. Take one
+    fish, but only one! And don't come back.
   m_choices:
   - m_choiceText: Thank you.
     m_nextNode: {fileID: 0}
