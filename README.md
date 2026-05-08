@@ -137,7 +137,7 @@ Assets/Scripts/
 ├── Core/                  Health.cs
 ├── Data/                  CatData, PickupData, DialogueNode (ScriptableObjects)
 ├── Dialogue/              DialogueManager, DialogueTrigger
-├── Gameplay/              Pickup, FishWinTrigger, InteractableHighlight
+├── Interactables/         Pickup, FishWinTrigger, InteractableHighlight
 ├── Managers/              GameManager
 ├── Player/                PlayerInputHandler, PlayerController, PlayerCombat, PlayerInteractor
 ├── SaveSystem/            SaveData, SaveManager
