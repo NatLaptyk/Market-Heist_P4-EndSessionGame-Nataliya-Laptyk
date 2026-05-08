@@ -3,7 +3,7 @@ using UnityEngine;
 // Singleton. Holds the current dialogue node and broadcasts events when the node changes
 // or when the conversation ends. The UI listens; the world (DialogueTrigger) starts
 // conversations; the GameManager listens for outcomes (persuaded, bribed, combat).
-//
+
 // Pause behavior: When dialogue is active we set Time.timeScale = 0. UI animations and
 // inputs continue (Time.unscaledDeltaTime), but enemy AI, gravity, and pickups freeze.
 // We restore timeScale to 1 when dialogue ends.

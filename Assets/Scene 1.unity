@@ -25150,11 +25150,39 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4912550609104215918, guid: 0793504ad3bc94f4cba8cd1e1621390e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.26
+      value: 0.313
       objectReference: {fileID: 0}
     - target: {fileID: 4912550609104215918, guid: 0793504ad3bc94f4cba8cd1e1621390e, type: 3}
       propertyPath: m_LocalPosition.z
       value: -3.35
+      objectReference: {fileID: 0}
+    - target: {fileID: 4912550609104215918, guid: 0793504ad3bc94f4cba8cd1e1621390e, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.5274347
+      objectReference: {fileID: 0}
+    - target: {fileID: 4912550609104215918, guid: 0793504ad3bc94f4cba8cd1e1621390e, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.0383181
+      objectReference: {fileID: 0}
+    - target: {fileID: 4912550609104215918, guid: 0793504ad3bc94f4cba8cd1e1621390e, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.8487308
+      objectReference: {fileID: 0}
+    - target: {fileID: 4912550609104215918, guid: 0793504ad3bc94f4cba8cd1e1621390e, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.0006836848
+      objectReference: {fileID: 0}
+    - target: {fileID: 4912550609104215918, guid: 0793504ad3bc94f4cba8cd1e1621390e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -2.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 4912550609104215918, guid: 0793504ad3bc94f4cba8cd1e1621390e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 116.357
+      objectReference: {fileID: 0}
+    - target: {fileID: 4912550609104215918, guid: 0793504ad3bc94f4cba8cd1e1621390e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -3.774
       objectReference: {fileID: 0}
     - target: {fileID: 5721597294633633236, guid: 0793504ad3bc94f4cba8cd1e1621390e, type: 3}
       propertyPath: m_Name
@@ -39912,7 +39940,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InteractableHighlight
   m_rotate: 1
-  m_rotationAxis: {x: 0, y: 1, z: 0}
+  m_rotationAxis: {x: 0, y: 0, z: 1}
   m_rotationSpeed: 45
   m_bob: 1
   m_bobAmplitude: 0.1

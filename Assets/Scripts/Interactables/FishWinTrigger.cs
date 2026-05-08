@@ -10,7 +10,7 @@ using UnityEngine;
 public class FishWinTrigger : MonoBehaviour
 {
     [Header("Settings")]
-    [SerializeField] private string m_unlockedPromptText = "[E] Steal Fish";
+    [SerializeField] private string m_unlockedPromptText = "[E] Take Fish";
     [SerializeField] private string m_lockedPromptText = "The chef is watching...";
 
     [Header("Chef Reference")]
@@ -41,7 +41,7 @@ public class FishWinTrigger : MonoBehaviour
 
         GameManager.Instance.SetFishStolen(true);
 
-        // Optional visual: hide the fish object after grabbing
+        // hide the fish object after grabbing
         gameObject.SetActive(false);
     }
 }

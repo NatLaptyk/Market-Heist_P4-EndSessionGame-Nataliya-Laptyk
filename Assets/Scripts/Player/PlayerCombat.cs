@@ -1,7 +1,7 @@
 using UnityEngine;
 
 // Melee attack: on Attack input, check for enemies within m_attackRange in front
-// of the player. Damage any Health component found. No animation timing logic — fire and
+// of the player. Damage any Health component found. No animation timing logic, fire and
 // resolve immediately.
 
 // Uses Physics.OverlapSphere because it's simpler than a sphere cast and the player
@@ -62,11 +62,10 @@ public class PlayerCombat : MonoBehaviour
         // Detect enemies in a sphere in front of the player
         Vector3 attackOrigin = transform.position + transform.forward * (m_attackRange * 0.5f) + Vector3.up * 0.5f;
         Collider[] hits = Physics.OverlapSphere(attackOrigin, m_attackRange * 0.5f, m_enemyLayer);
-        Debug.Log($"[ATTACK] Hits found: {hits.Length}, Layer mask value: {m_enemyLayer.value}");
+       
 
         foreach (Collider hit in hits)
         {
-            Debug.Log($"[ATTACK] Hit: {hit.gameObject.name}, layer: {LayerMask.LayerToName(hit.gameObject.layer)}");
             if (hit.TryGetComponent(out Health enemyHealth))
             {
                 enemyHealth.TakeDamage(m_attackDamage);

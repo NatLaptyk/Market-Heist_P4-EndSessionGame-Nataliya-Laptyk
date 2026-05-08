@@ -5,8 +5,7 @@ using UnityEngine;
 // serialize it. Vector3 doesn't serialize cleanly via JsonUtility in some Unity versions,
 // so we use a SerializableVector3 wrapper.
 
-// Add fields here as the game grows. Each system contributes its state to this class
-// before write, and reads its state back after load.
+// Each system contributes its state to this class before write, and reads its state back after load.
 
 [System.Serializable]
 public class SaveData

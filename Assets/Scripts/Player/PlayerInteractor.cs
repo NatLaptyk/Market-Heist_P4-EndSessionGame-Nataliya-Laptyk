@@ -71,8 +71,7 @@ public class PlayerInteractor : MonoBehaviour
 
         if (Physics.SphereCast(origin, m_detectionRadius, direction, out RaycastHit hit, m_detectionRange, m_interactableLayer))
         {
-            Debug.Log($"[INTERACT] SphereCast hit: {hit.collider.name} on layer {LayerMask.LayerToName(hit.collider.gameObject.layer)}");
-
+           
             if (hit.collider.TryGetComponent(out DialogueTrigger dialogueTrigger) && dialogueTrigger.CanInteract())
             {
                 newDialogueTarget = dialogueTrigger;
@@ -80,11 +79,11 @@ public class PlayerInteractor : MonoBehaviour
             else if (hit.collider.TryGetComponent(out FishWinTrigger fishTrigger))
             {
                 newFishTarget = fishTrigger;
-                Debug.Log($"[INTERACT] Fish detected, CanInteract: {fishTrigger.CanInteract()}");
+                
             }
         }
 
-        // Pick whichever target was found, prefer dialogue
+        // Pick whichever target was found (if any). DialogueTrigger takes priority if both are somehow hit.
         string newPrompt = null;
         object newTargetReference = null;
 

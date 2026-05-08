@@ -3,9 +3,9 @@ using UnityEngine.AI;
 
 // AI uses enum-based state machine: Patrol -> Chase -> Attack -> Chase -> Patrol.
 // Distance checks in EvaluateState() decide which state runs each frame.
-// Movement handled by NavMeshAgent (Week 12 pattern) — agent.SetDestination does the
+// Movement handled by NavMeshAgent: agent.SetDestination does the
 // pathfinding, we just tell it where to go.
-//
+
 // Each enemy holds a reference to a CatData ScriptableObject for stats.
 // Animator hooks: Speed float drives Idle/Trot/Run blend; Attack/TakeDamage triggers fire on actions.
 
@@ -101,7 +101,6 @@ public class EnemyAI : MonoBehaviour
 
     private void Update()
     {
-        // Guards from teacher's slides
         if (!m_agent.isOnNavMesh) return;
         if (m_health.IsDead) return;
         if (m_player == null) return;
@@ -190,11 +189,9 @@ public class EnemyAI : MonoBehaviour
         if (m_agent != null && m_agent.isOnNavMesh) m_agent.ResetPath();
         if (m_animator != null) m_animator.SetTrigger("Die");
 
-        // Disable this AI script — corpse stays in scene but stops thinking
+        // Disable this AI script — defeated enemy stays in scene but stops thinking
         enabled = false;
 
-        // Optional: disable the agent so player can walk through the corpse
-        if (m_agent != null) m_agent.enabled = false;
     }
 
     // Editor visualization for ranges — yellow for chase, red for attack

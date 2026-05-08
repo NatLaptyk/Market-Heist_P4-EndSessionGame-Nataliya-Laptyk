@@ -5,10 +5,10 @@ using UnityEngine.UI;
 // Subscribes to DialogueManager events and renders the current node. Spawns choice
 // buttons dynamically from the ChoiceButton prefab; bribe choices are hidden if the
 // player doesn't have enough coins.
-//
+
 // Lives on DialoguePanel itself, but DialoguePanel starts inactive. To avoid the
 // "scripts on inactive GameObjects miss events" rule, this script lives on the always-
-// active HUD_Canvas root and TOGGLES the panel GameObject on/off via SetActive.
+// active HUD_Canvas root and toggles the panel GameObject on/off via SetActive.
 
 public class DialoguePanel : MonoBehaviour
 {
@@ -79,8 +79,6 @@ public class DialoguePanel : MonoBehaviour
     DialogueNode.DialogueChoice[] choices = node.Choices();
     if (choices == null) return;
 
-    Debug.Log($"[REBUILD] Building {choices.Length} choice buttons for node '{node.SpeakerName()}'");
-
     for (int i = 0; i < choices.Length; i++)
     {
         DialogueNode.DialogueChoice choice = choices[i];
@@ -96,15 +94,13 @@ public class DialoguePanel : MonoBehaviour
         Button button = buttonObj.GetComponentInChildren<Button>();
         TMP_Text buttonText = buttonObj.GetComponentInChildren<TMP_Text>();
 
-        Debug.Log($"[REBUILD] Created button {i}: button={button}, text={buttonText}");
-
         if (buttonText != null) buttonText.text = choice.ChoiceText();
 
         int capturedIndex = i;
         if (button != null)
         {
             button.onClick.AddListener(() => OnChoiceClicked(capturedIndex));
-            Debug.Log($"[REBUILD] Listener added to button {i}");
+            
         }
         else
         {
@@ -128,7 +124,6 @@ public class DialoguePanel : MonoBehaviour
 
     private void OnChoiceClicked(int index)
     {
-        Debug.Log($"[DIALOGUE] Choice clicked: {index}");
         if (DialogueManager.Instance != null)
         {
             DialogueManager.Instance.ChooseOption(index);

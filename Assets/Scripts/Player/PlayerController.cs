@@ -2,10 +2,9 @@ using UnityEngine;
 
 // Movement uses CharacterController for clean integration with NavMesh enemies.
 // Direction is camera-relative: pressing W moves the cat away from the camera regardless
-// of camera yaw — standard 3rd-person convention.
-//
-// Jump uses a simple impulse on the vertical velocity. Single jump only (no double-jump,
-// no jump buffering, no coyote time) — keeping scope minimal for the assignment.
+// of camera yaw.
+
+// Jump uses a simple impulse on the vertical velocity.
 
 [RequireComponent(typeof(CharacterController))]
 public class PlayerController : MonoBehaviour
@@ -114,9 +113,7 @@ public class PlayerController : MonoBehaviour
     private void OnJump()
     {
         // Only jump if grounded — no double-jump
-        Debug.Log($"OnJump fired. Frame: {Time.frameCount}, Grounded: {m_characterController.isGrounded}, currentY velocity: {m_verticalVelocity.y}");
-        Debug.Log($"[JUMP] Called at time {Time.time:F2}, grounded={m_characterController.isGrounded}, velY={m_verticalVelocity.y:F2}");
-    
+           
         if (!m_characterController.isGrounded) return;
 
         m_verticalVelocity.y = m_jumpForce;
@@ -139,10 +136,7 @@ public class PlayerController : MonoBehaviour
         }
 
         m_characterController.Move(m_verticalVelocity * Time.deltaTime);
-        if (m_verticalVelocity.y > 0f)
-    {
-        Debug.Log($"[GRAVITY] Frame {Time.frameCount}: velY={m_verticalVelocity.y:F2}, grounded={m_characterController.isGrounded}");
-    }
+       
     }
 
     private void UpdateAnimator()

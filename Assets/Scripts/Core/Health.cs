@@ -1,7 +1,7 @@
 using UnityEngine;
 
 // Generic health component used by both Player and Enemy.
-// Fires its own local C# events. The Player will have a PlayerHealth wrapper that
+// Fires its own local C# events. The Player will have a PlayerHealth component that
 // forwards these into GameManager events for the HUD; enemies handle them locally.
 
 public class Health : MonoBehaviour

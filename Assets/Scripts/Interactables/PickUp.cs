@@ -6,7 +6,7 @@ using UnityEngine;
 
 // Uses OnTriggerEnter — player must have a Collider AND a Rigidbody (CharacterController
 // counts as the body for trigger purposes, but Unity also wants a Rigidbody to fire
-// 3D triggers reliably). If pickups don't fire, add Rigidbody (Is Kinematic ✓) to player.
+// 3D triggers reliably). 
 
 [RequireComponent(typeof(Collider))]
 public class Pickup : MonoBehaviour
@@ -47,7 +47,6 @@ public class Pickup : MonoBehaviour
             SaveManager.Instance.NotifyPickupCollected(m_pickupId);
         }
 
-        // Save system will add this ID to "collected pickups" list before destroy
-        Destroy(gameObject);
+            Destroy(gameObject);
     }
 }

@@ -2,10 +2,10 @@ using UnityEngine;
 
 // One conversation node = one .asset. Each node holds the speaker's text and a list of
 // choices. Each choice can lead to another DialogueNode (or null = end of conversation).
-//
+
 // Choices can be conditionally locked behind world state: requiredCoins for the bribe
 // option, requiresChefHostile to gate the "fight" option after persuasion succeeded, etc.
-//
+
 // Side effects (setting flags like ChefCatPersuaded) are triggered by the choice itself,
 // not by the node, so a node can be reused in multiple branches.
 

@@ -3,7 +3,7 @@ using UnityEngine;
 // Lives on a dialogue NPC (chef cat). Holds a root DialogueNode reference.
 // PlayerInteractor detects this component via raycast and calls TryInteract() when the
 // player presses Interact.
-//
+
 // Implements a simple IInteractable contract via the public method — no interface needed,
 // PlayerInteractor just calls TryGetComponent<DialogueTrigger> on whatever it hits.
 
@@ -22,7 +22,7 @@ public class DialogueTrigger : MonoBehaviour
 
     public bool CanInteract()
     {
-        // Cannot talk to the chef if they've gone hostile or are dead
+        // Cannot talk to the chef if they've gone hostile or are defeated
         if (m_enemyAI != null && m_enemyAI.enabled) return false;
         if (TryGetComponent(out Health health) && health.IsDead) return false;
         return m_rootNode != null;
