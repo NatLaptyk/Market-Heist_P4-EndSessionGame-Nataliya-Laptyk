@@ -130,6 +130,7 @@ Both are tested via:
 - Cat jump animation has a double-bounce visual from the imported asset's clip: physics is correct (single jump), animation is what plays the bounce, which is why the Jump animation was disabled.
 - After loading a save where coins were collected, the original coin GameObjects are destroyed at runtime. If you save very early and load very late, you'll see the coins reappear if their IDs weren't in the saved list.
 - Dialogue choices that should be hidden by coin requirement do not show a disabled state; they're simply hidden, which is intentional.
+- EnemyAI.cs is disabled at start for Chef Cat, enabled by DialogueTrigger.MakeChefHostile().
 
 ## Project Structure
 Assets/Scripts/
