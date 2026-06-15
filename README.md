@@ -6,7 +6,7 @@
 
 ## Game Concept
 
-Fish Market Heist is a 3D stealth-action prototype. The player controls a stray cat trying to obtain a fish from a market stall. 
+Market Heist is a 3D stealth-action prototype. The player controls a stray cat trying to obtain a fish from a market stall. 
 Two patrol cats guard adjacent stalls, and a chef cat blocks access to the prize fish.
 
 The player can win by:
