@@ -1,4 +1,4 @@
-# Fish Market Heist
+# Market Heist
 ## Scripting II · Assignment 4 · End Session Game
 
 **Name:** Nataliya Laptyk
